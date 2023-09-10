@@ -9,20 +9,20 @@
 
 class Database {
  public:
-  // void CreateTable(const std::string& table_name);
-  // void DropTable(const std::string& table_name);
-  // DbTable& GetTable(const std::string& table_name);
+  void CreateTable(const std::string& table_name);
+  void DropTable(const std::string& table_name);
+  DbTable& GetTable(const std::string& table_name);
 
-  // Database() = default;
-  // Database(const Database& rhs);
-  // Database& operator=(const Database& rhs);
-  // ~Database();
-  // friend std::ostream& operator<<(std::ostream& os, const Database& db);
+  Database() = default;
+  Database(const Database& rhs);
+  Database& operator=(const Database& rhs);
+  ~Database();
+  friend std::ostream& operator<<(std::ostream& os, const Database& db);
 
  private:
-  // std::map<std::string, DbTable*> tables_;  // maps table name -> table
+  std::map<std::string, DbTable*> tables_;  // maps table name -> table
 };
 
-// std::ostream& operator<<(std::ostream& os, const Database& db);
+std::ostream& operator<<(std::ostream& os, const Database& db);
 
 #endif
